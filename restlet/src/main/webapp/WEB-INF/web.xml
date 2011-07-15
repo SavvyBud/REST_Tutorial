@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Tutorial Web Application</display-name>
+  <servlet>
+                <servlet-name>RestletServlet</servlet-name>
+                <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+                <init-param>
+                        <param-name>org.restlet.application</param-name>
+                        <param-value>com.scopekya.tutorial.TutorialApplication</param-value>
+                </init-param>
+
+                <!-- List of supported client protocols -->
+                <init-param>
+                        <param-name>org.restlet.clients</param-name>
+                        <param-value>HTTP HTTPS WAR CLAP RIAP FILE</param-value>
+                </init-param>
+        </servlet>
+
+        <servlet-mapping>
+                <servlet-name>RestletServlet</servlet-name>
+                <url-pattern>/*</url-pattern>
+        </servlet-mapping>
+</web-app>
+
